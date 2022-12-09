@@ -14,7 +14,9 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -51,19 +53,8 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>
-                                repackage
-                            </goal>
+                            <goal>repackage</goal>
                         </goals>
-                        <configuration>
-                            <skip>true</skip>
-                            <excludes>
-                                <exclude>
-                                    <groupId>org.projectlombok</groupId>
-                                    <artifactId>lombok</artifactId>
-                                </exclude>
-                            </excludes>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
